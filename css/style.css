@@ -11,6 +11,32 @@ html {
   font-family: 'Fira Sans', sans-serif;
 }
 
+table {
+  margin: 10vh auto;
+  border: 0;
+  background: rgb(250, 249, 249);
+  font-size: 1.5vw;
+}
+
+caption {
+  margin: 0 0 5vh 0;
+}
+
+td,
+th {
+  padding: 0.8vw;
+  border: 0;
+  background: white;
+}
+
+th {
+  background: rgb(250, 249, 249);
+}
+
+td {
+  width: 3vw;
+}
+
 :root {
   --non-metal: #ffffc5;
   --alkali-metal: #ffc7c7;
@@ -75,30 +101,4 @@ tr:nth-child(-n + 2) td:nth-child(n + 2):nth-child(-n + 17),
 tr:nth-child(n + 7) td:nth-child(n + 3):nth-child(-n + 3),
 tr:nth-child(n + 10) td:nth-child(n + 1):nth-child(-n + 3) {
   background: white;
-}
-
-table {
-  margin: 10vh auto;
-  border: 0;
-  background: rgb(250, 249, 249);
-  font-size: 1.5vw;
-}
-
-caption {
-  margin: 0 0 5vh 0;
-}
-
-td,
-th {
-  padding: 0.8vw;
-  border: 0;
-  background: white;
-}
-
-th {
-  background: rgb(250, 249, 249);
-}
-
-td {
-  width: 3vw;
 }
