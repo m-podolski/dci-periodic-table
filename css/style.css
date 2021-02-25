@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: rgb(236, 236, 236);
+  font-family: 'Fira Sans', sans-serif;
+}
+
+:root {
+  --non-metal: #ffffc5;
+  --alkali-metal: #ffc7c7;
+  --alkaline-earth-metal: #d4d4ff;
+  --transition-metal: #bcdeff;
+  --post-transition-metal: #c7ffc7;
+  --metalloid: #e2efbf;
+  --noble-gas: #ffe4bb;
+  --lanthanide: #b9ffff;
+  --actinide: #cdffee;
+}
+
+/* Main Blocks */
+td:nth-child(1) {
+  background: var(--alkali-metal);
+}
+
+td:nth-child(n + 2) {
+  background: var(--alkaline-earth-metal);
+}
+
+td:nth-child(n + 3) {
+  background: var(--transition-metal);
+}
+
+td:nth-child(n + 13) {
+  background: var(--metalloid);
+}
+
+td:nth-child(18) {
+  background: var(--noble-gas);
+}
+
+/* Exceptions: --post-transition-metal  --metalloid --noble-gas*/
+tr:nth-child(n + 4) td:nth-child(n + 13):nth-child(-n + 13),
+tr:nth-child(n + 6) td:nth-child(n + 13):nth-child(-n + 14),
+tr:nth-child(n + 7) td:nth-child(n + 13):nth-child(-n + 15),
+tr:nth-child(n + 8) td:nth-child(n + 13):nth-child(-n + 16) {
+  background: var(--post-transition-metal);
+}
+
+tr:nth-child(-n + 8) td:nth-child(n + 17):nth-child(-n + 17),
+tr:nth-child(-n + 5) td:nth-child(n + 16):nth-child(-n + 17),
+tr:nth-child(-n + 4) td:nth-child(n + 15):nth-child(-n + 17),
+tr:nth-child(-n + 3) td:nth-child(n + 14):nth-child(-n + 17) {
+  background: var(--non-metal);
+}
+
+/* Fancy Rows */
+/* Pseudo classes on td only for specificity */
+tr:nth-child(n + 10) td:nth-child(n + 1):nth-child(-n + 18) {
+  background: var(--lanthanide);
+}
+
+tr:nth-child(n + 11) td:nth-child(n + 1):nth-child(-n + 18) {
+  background: var(--actinide);
+}
+
+/* Empty Cells */
+tr:nth-child(-n + 4) td:nth-child(n + 3):nth-child(-n + 12),
+tr:nth-child(-n + 2) td:nth-child(n + 2):nth-child(-n + 17),
+tr:nth-child(n + 7) td:nth-child(n + 3):nth-child(-n + 3),
+tr:nth-child(n + 10) td:nth-child(n + 1):nth-child(-n + 3) {
+  background: white;
+}
+
+table {
+  margin: 10vh auto;
+  border: 0;
+  background: rgb(250, 249, 249);
+  font-size: 1.5vw;
+}
+
+caption {
+  margin: 0 0 5vh 0;
+}
+
+td,
+th {
+  padding: 0.8vw;
+  border: 0;
+  background: white;
+}
+
+th {
+  background: rgb(250, 249, 249);
+}
+
+td {
+  width: 3vw;
+}
